@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Text layoutX="31.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Кількість команд вихідного коду (команд)">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Text>
+      <Text layoutX="31.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Трудомісткість, (люд.-міс.)">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Text>
+      <Text layoutX="31.0" layoutY="162.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Продуктивність (вих.ком./люд.-міс.)">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Text>
+      <Text layoutX="31.0" layoutY="196.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Кількість виконавців (люд.)">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Text>
+      <Text layoutX="31.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Час, потрібний на створення програмного продукту (міс.)">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Text>
+      <Text layoutX="31.0" layoutY="258.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Основна заробітна платня виконавця (грн.)">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Text>
+      <Text layoutX="31.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Додаткова заробітна платня (грн.)">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Text>
+      <Text layoutX="31.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Загальні витрати на утримання і експлуатацію ПЕОМ при виконанні проекту (грн.)" wrappingWidth="453.8160095214844">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Text>
+      <Text layoutX="31.0" layoutY="374.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Собівартість програмного продукту (грн.)" wrappingWidth="453.8160095214844">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Text>
+      <Text layoutX="31.0" layoutY="405.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Вартість готового програмного продукту (грн.)" wrappingWidth="453.8160095214844">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Text>
+      <MenuBar layoutY="1.0" prefHeight="26.0" prefWidth="750.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem fx:id="loadStartValuesOption" mnemonicParsing="false" onAction="#openInputValuesFile" text="Load start values" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <TextField fx:id="codeLines" editable="false" layoutX="622.0" layoutY="74.0" prefHeight="25.0" prefWidth="89.0" />
+      <TextField fx:id="peopleTextField" editable="false" layoutX="622.0" layoutY="105.0" prefHeight="25.0" prefWidth="89.0" />
+      <TextField fx:id="producitivityTextField" editable="false" layoutX="622.0" layoutY="141.0" prefHeight="25.0" prefWidth="89.0" />
+      <TextField fx:id="performersTextField" editable="false" layoutX="622.0" layoutY="175.0" prefHeight="25.0" prefWidth="89.0" />
+      <TextField fx:id="timeTextField" editable="false" layoutX="622.0" layoutY="206.0" prefHeight="25.0" prefWidth="89.0" />
+      <TextField fx:id="mainSalaryTextField" editable="false" layoutX="622.0" layoutY="238.0" prefHeight="25.0" prefWidth="89.0" />
+      <TextField fx:id="additionalSalaryTextField" editable="false" layoutX="622.0" layoutY="268.0" prefHeight="25.0" prefWidth="89.0" />
+      <TextField fx:id="totalComputerCostsTextField" editable="false" layoutX="622.0" layoutY="313.0" prefHeight="25.0" prefWidth="89.0" />
+      <TextField fx:id="primeCostTextField" editable="false" layoutX="622.0" layoutY="355.0" prefHeight="25.0" prefWidth="89.0" />
+      <TextField fx:id="productCostTextField" editable="false" layoutX="622.0" layoutY="383.0" prefHeight="25.0" prefWidth="89.0" />
+   </children>
+</Pane>
