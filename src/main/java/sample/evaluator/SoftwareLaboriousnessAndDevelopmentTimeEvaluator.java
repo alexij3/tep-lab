@@ -5,7 +5,11 @@ import sample.dto.StartValues;
 public class SoftwareLaboriousnessAndDevelopmentTimeEvaluator {
 
     public double evaluateEveryDevelopmentStageTime(StartValues startValues, double codeLines, double qualificationCoefficient) {
-        return 0.0;
+        return startValues.getObjectiveDescriptionTime() + evaluateObjectiveDescriptionTime(codeLines, 1.35, qualificationCoefficient)
+                + evaluateAlgorithmAndBlockDiagramDevelopmentTime(codeLines, qualificationCoefficient)
+                + evaluateProgrammingTime(codeLines, qualificationCoefficient)
+                + evaluateConfigurationAndTestingTime(codeLines, qualificationCoefficient)
+                + startValues.getDocumentationTime();
     }
 
     public double evaluateSoftwareCodeLines(double conventionalCoefficient, double innovationAndComplexityCoefficient) {

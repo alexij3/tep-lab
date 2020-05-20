@@ -2,35 +2,35 @@ package sample.evaluator;
 
 public class ComputerUsageCostEvaluator {
 
-    private double evaluateComputerUptime(int workingDays, int computerWorkingOursPerDay) {
-        return workingDays * computerWorkingOursPerDay * 0.9;
+    public double evaluateComputerUptime(int workingDays, double computerWorkingHoursPerDay) {
+        return workingDays * computerWorkingHoursPerDay * 0.9;
     }
 
-    private double evaluateElectricityCosts(int hoursPerYear, double oneKvtCost, double powerInKvt) {
+    public double evaluateElectricityCosts(double hoursPerYear, double oneKvtCost, double powerInKvt) {
         return hoursPerYear * oneKvtCost * powerInKvt;
     }
 
-    private double evaluateMainComputerUsersSalary(double fareCoefficient, int computersCount, double bonusPercent) {
-        return ((1600 * fareCoefficient) / computersCount ) * (1 + bonusPercent) * 12;
+    public double evaluateMainComputerUsersSalary(double monthlySalary, double fareCoefficient, int computersCount, double bonusPercent) {
+        return ((monthlySalary * fareCoefficient) / computersCount ) * (1 + bonusPercent) * 12;
     }
 
-    private double evaluateAdditionalComputerUsersSalary(double mainSalary, double additionalSalaryPercent) {
+    public double evaluateAdditionalComputerUsersSalary(double mainSalary, double additionalSalaryPercent) {
         return mainSalary * additionalSalaryPercent;
     }
 
-    private double evaluateComputerUserESV(double mainSalary, double additionalSalary) {
+    public double evaluateComputerUserESV(double mainSalary, double additionalSalary) {
         return (mainSalary + additionalSalary) * 0.347;
     }
 
-    private double evaluateDepreciationDeduction(double balanceCost, int yearsInUse) {
+    public double evaluateDepreciationDeduction(double balanceCost, int yearsInUse) {
         return balanceCost / yearsInUse;
     }
 
-    private double evaluateHourlyComputerUsageCosts(double sumOfYearCosts, double computerUptime) {
+    public double evaluateHourlyComputerUsageCosts(double sumOfYearCosts, double computerUptime) {
         return sumOfYearCosts / computerUptime;
     }
 
-    private double evaluateTotalComputerUsageCosts(double hourlyComputerUsageCosts, int productCreationTime) {
+    public double evaluateTotalComputerUsageCosts(double hourlyComputerUsageCosts, int productCreationTime) {
         return hourlyComputerUsageCosts * productCreationTime;
     }
 

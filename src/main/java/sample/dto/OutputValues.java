@@ -6,7 +6,7 @@ public class OutputValues {
     private double laboriousness;
     private double productivity;
     private double performersCount;
-    private int productCreationNeededTime;
+    private double productCreationNeededTime;
     private double mainPerformerSalary;
     private double additionalPerformerSalary;
     private double totalComputerUsageCosts;
@@ -45,11 +45,11 @@ public class OutputValues {
         this.performersCount = performersCount;
     }
 
-    public int getProductCreationNeededTime() {
+    public double getProductCreationNeededTime() {
         return productCreationNeededTime;
     }
 
-    public void setProductCreationNeededTime(int productCreationNeededTime) {
+    public void setProductCreationNeededTime(double productCreationNeededTime) {
         this.productCreationNeededTime = productCreationNeededTime;
     }
 
